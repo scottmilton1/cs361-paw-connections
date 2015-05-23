@@ -1,11 +1,11 @@
-<? php
+<?php
 
 $error_message = 'Unable to post listing to database.';
 
 // get form data
 
 // connect to database
-require_once('connect.php');
+//require_once('connect.php');
 
 // check that required values are provided
 
@@ -61,9 +61,9 @@ $lat = $_POST['lat'];
 $lng = $_POST['lng'];
 $text_body = $_POST['text_body'];
 $species = $_POST['species'];
-$email = (isset($_POST['email']) ? $_POST['email'] : NULL;
-$tel = (isset($_POST['tel']) ? $_POST['tel'] : NULL;
-$picture_url = (isset($_POST['picture_url']) ? $_POST['picture_url'] : NULL;
+$email = (isset($_POST['email'])) ? $_POST['email'] : NULL;
+$tel = (isset($_POST['tel'])) ? $_POST['tel'] : NULL;
+$picture_url = (isset($_POST['picture_url'])) ? $_POST['picture_url'] : NULL;
 
 if (!$stmt->bind_param("isiddsssis", $id, $title, $zipcode, $lat, $lng, $text_body, $species, $email, $tel, $picture_url)) {
 return false;
