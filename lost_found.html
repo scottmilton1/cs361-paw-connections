@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paw Connections Lost and Found</title>
+	<script type="text/javascript" src="js/lost_found.js"></script>
+</head>
+<body>
+<div id="searchBar">
+	<form id="searchForm">
+		<span>Dog</span><input id="dog" type="checkbox" name="dog">
+		<span>Cat</span><input id="cat" type="checkbox" name="cat">
+		<span>Bird</span><input id="bird" type="checkbox" name="bird">
+		<span>Zip Code</span><input id="zipCode" type="text" name="zipCode">
+
+		<select id="distance">
+			<option value="1">Select Distance</option>
+			<option value="25">25</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+			<option value="200">200</option>
+		</select>
+		<span>Filter by Distance</span>
+		<input id="zip" type="checkbox" name="zip">
+	</form>
+</div>
+<div id="listings"></div>
+</body>
+</html>
