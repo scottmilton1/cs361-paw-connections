@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 session_start();
 ?>
@@ -22,19 +22,25 @@ session_start();
         </legend>
         <p>
           <label for="title">Title</label>
-          <input type="text" id="title" name="title" required>
+          <input type="text" id="title" name="title">
+        </p>        
+        <p>
+          Type of listing:
+          <br>
+          <input type="radio" id="lost" name="lostfound" value="lost" selected="true" checked> Lost
+          <input type="radio" id="found" name="lostfound" value="found"> Found
         </p>
         <p>
           <label for="zipcode">Zip Code</label>
-          <input type="text" id="zipcode" name="zipcode" required>
+          <input type="text" id="zipcode" name="zipcode">
         </p>
         <p>
           <label for="species">Species</label>
-          <input type="text" id="species" name="species" required>
+          <input type="text" id="species" name="species">
         </p>
         <p>
            <label for="pictureurl">Photo URL</label>
-          <input type="text" id="pictureurl" name="pictureurl">
+          <input type="text" id="picture_url" name="picture_url">
         </p>
         <p>
            <label for="email">E-mail address</label>
@@ -45,16 +51,15 @@ session_start();
           <input type="tel" id="tel" name="tel">
         </p>
         <p>
-          <label for="textbody">Text Body</label>
-          <input type="text" id="textbody" name="textbody" required>
-        </p>
-          
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description">
+        </p>                   
         <p>
           <button type="submit" id="submit" name="submit">Submit</button>
         </p>
       </fieldset>
     </form>
   </div>
-  <script src="../js/post-lost-found.js"></script>
+  <script src="post-lost-found.js"></script>
 </body>
 </html>
