@@ -53,15 +53,17 @@
 		}
 	}
 	
-	$query = "SELECT title FROM $table WHERE $where_clause";
+	$query = "SELECT id, title, picture_url, species, lostfound FROM $table WHERE $where_clause";
 	$filtered = $mysqli->prepare($query);
 	$filtered->execute();
-	$filtered->bind_result($title);
+	$filtered->bind_result($id, $title, $picture_url, $species, $lostfound);
 	while($filtered->fetch()) {
-		echo "<span>";
-		echo $title;
-		echo "</span><br/>";
-	}	
+		echo "<div><img src=\"$picture_url\"></div>";
+		echo "<div>
+				<p><a class='detail_link' id='$id' href='http://pawconnections.net/pawconnections/php/lost_found_detail.php?id=$id'>$title</a>
+				$lostfound $species</p>
+				</div>";
+	}
 	//search for dogs
 	$filtered->close();
 	exit();
