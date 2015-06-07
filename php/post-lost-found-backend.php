@@ -150,14 +150,14 @@ function add_to_db($mysqli, $title, $zipcode, $text_body, $species, $email, $tel
   $result = json_decode($result,true);
 
   foreach($result as $keys => $value){
-	//echo "$keys:$value\n";
-	if ($keys === 'lat'){
-		$lat = $value;
-		//echo "from lat: " . $lat . "\n";
-	}elseif($keys === 'lng'){
-		$lng = $value;
-		//echo "From Lng: " . $lng. "\n";
-	}
+    //echo "$keys:$value\n";
+    if ($keys === 'lat'){
+      $lat = $value;
+      //echo "from lat: " . $lat . "\n";
+    }elseif($keys === 'lng'){
+      $lng = $value;
+      //echo "From Lng: " . $lng. "\n";
+    }
   };
 
   // step 2 - make the prepared statement
